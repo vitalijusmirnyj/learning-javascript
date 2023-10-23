@@ -3,7 +3,10 @@
 ## How to add file to git stage
 
 ```
+# add a single file
 git add <file>
+# add all files
+git add *
 ```
 
 ## How to commit to git
