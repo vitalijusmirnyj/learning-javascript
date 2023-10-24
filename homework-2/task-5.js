@@ -7,5 +7,5 @@ function computeModulo(number, n) {
     let result = number % n;
     return result;
 }
-    
-    module.exports.computeModulo = computeModulo;
+
+module.exports.computeModulo = computeModulo;

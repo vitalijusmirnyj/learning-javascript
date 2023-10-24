@@ -8,8 +8,8 @@ Experiment with number multiplications:
 Do you always get the result you expect? 
 */
 
-function multiplication(number1, number2){
-console.log(number1 * number2);
+function multiplication(number1, number2) {
+    return number1 * number2;
 }
 
-module.exports.multiplication = multiplication ;
+module.exports.multiplication = multiplication;

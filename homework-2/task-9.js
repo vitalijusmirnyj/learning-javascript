@@ -3,9 +3,9 @@ Task: Create a function which will compute the maximum of two numbers. Try doing
 Hint: Math object can help here.
 */
 
-function MaxOfTwo(number1, number2) {
+function maxOfTwo(number1, number2) {
     let result = Math.max(number1, number2);
     return result;
 }
 
-module.exports.MaxOfTwo = MaxOfTwo;
+module.exports.maxOfTwo = maxOfTwo;
