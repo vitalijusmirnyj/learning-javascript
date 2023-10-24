@@ -8,3 +8,4 @@ function MaxOfTwo(number1, number2) {
     return result;
 }
 
+module.exports.MaxOfTwo = MaxOfTwo;
