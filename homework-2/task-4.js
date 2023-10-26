@@ -9,4 +9,4 @@ function numberRoundedByN(number, n) {
    return result;
 }
 
-module.exports.numberRoundByN = numberRoundedByN;
+module.exports.numberRoundedByN = numberRoundedByN;

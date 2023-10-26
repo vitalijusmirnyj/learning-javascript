@@ -4,9 +4,10 @@ Hint: check if you can reuse already existing functions for this.
 */
 
 function findCosineLog10SquareRoot(number) {
-    let result = Math.sqrt(number).Math.log(number).Math(cos);
-    return result;
+    let squareRoot = Math.sqrt(number);
+    let log10 = Math.log10(squareRoot);
+    let cosine = Math.cos(log10);
+    return cosine;
 }
 
-console.log(findCosineLog10SquareRoot(10000));
 module.exports.findCosineLog10SquareRoot = findCosineLog10SquareRoot;
