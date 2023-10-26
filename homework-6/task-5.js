@@ -7,3 +7,5 @@ function oddNumberLog(number) {
         }
     }
 }
+
+module.exports.oddNumberLog = oddNumberLog;

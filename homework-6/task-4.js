@@ -7,3 +7,5 @@ function evenNumberLog(number) {
         }
     }
 }
+
+module.exports.evenNumberLog = evenNumberLog;

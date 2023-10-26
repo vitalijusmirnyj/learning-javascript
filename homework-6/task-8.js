@@ -5,3 +5,5 @@ function arrayOfNumbers(array) {
         console.log(array[i]);
     }
 }
+
+module.exports.arrayOfNumbers = arrayOfNumbers;

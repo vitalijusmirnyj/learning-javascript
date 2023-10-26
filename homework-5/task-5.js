@@ -9,21 +9,26 @@ Third function will have this signature function isEvenOrOdd(number) that will r
   statements within this function implementation.
 */
 
-function isOdd(number) {
-    if (number % 2 === 0) {
-        return "even"
-    } else {
-        return false;
-    }
-}
-
 function isEven(number) {
-    if (number % 2 !== 0) {
-        return "odd"
+    if (number % 2 === 0) {
+        return true;
     } else {
         return false;
     }
 }
 
-function isEvenOrOdd(number)
- if (number ) 
+function isOdd(number) {
+    if (number % 2 !== 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function isEvenOrOdd(number) {
+    if (isEven(number)) {
+        return "even";
+    } else if (isOdd(number)) {
+        return "odd";
+    }
+}

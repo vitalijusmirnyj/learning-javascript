@@ -5,3 +5,5 @@ function fromNumberToZero(number) {
         console.log(i);
     }
 }
+
+module.exports.fromNumberToZero = fromNumberToZero;

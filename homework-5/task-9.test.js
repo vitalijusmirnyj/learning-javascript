@@ -5,13 +5,13 @@ test('check if string: starts with, ends with, includes specific string', () => 
 });
 
 test('check if string: starts with, ends with, includes specific string', () => {
-    expect(task.stringVariations("Hello my world", "world")).toBe("Ends-with");
-  });
+  expect(task.stringVariations("Hello my world", "world")).toBe("Ends-with");
+});
 
-  test('check if string: starts with, ends with, includes specific string', () => {
-    expect(task.stringVariations("Hello my world", "world")).toBe("Contains");
-  });
+test('check if string: starts with, ends with, includes specific string', () => {
+  expect(task.stringVariations("Hello my world", "my")).toBe("Contains");
+});
 
-  test('check if string: starts with, ends with, includes specific string', () => {
-    expect(task.stringVariations("Hello my world", "nope")).toBe("Unrelated");
-  });
+test('check if string: starts with, ends with, includes specific string', () => {
+  expect(task.stringVariations("Hello my world", "nope")).toBe("Unrelated");
+});
