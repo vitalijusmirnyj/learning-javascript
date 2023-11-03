@@ -8,11 +8,21 @@ For example:
 [1, 2, 3, 4], count=4 - should return [1, 2, 3, 4]
 */
 
-function rotationToTheRightByNumber(array, n) {
-    for (let i = 0; i < array.length; i++) {
-        
-    }
-return array;
+function arrayRotatedToTheRightByNumber(array, number) {
+        let newArray = [];
+        for (let i = 0; i < array.length; i++) {
+                let newIndex = i + number;
+                if (newIndex >= array.length) {
+                        let correctedNewIndex = newIndex % array.lenght;
+                        newArray.splice(correctedNewIndex, 0, array[i]);
+                } else {
+                        newArray.splice(newIndex, 0, array[i]);
+                }
+        }
+        return newArray;
 }
 
-console.log(rotationToTheRightByNumber([1, 2, 3, 4]), 2);
+
+console.log(arrayRotatedToTheRightByNumber([1, 2, 3, 4, 5, 6], 2));
+
+module.exports.arrayRotatedToTheRightByNumber = arrayRotatedToTheRightByNumber;
