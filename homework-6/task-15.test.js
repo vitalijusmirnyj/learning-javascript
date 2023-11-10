@@ -11,7 +11,7 @@ test('will output a first number which is odd using break', () => {
     for (let i = 0; i < array.length; i++) {
         if (array[i] % 2 !== 0) {
             expect(logSpy).toHaveBeenNthCalledWith(i + 1, array[i]);
-            evenCount++;
+            oddCount++;
         }
         break;
     }
