@@ -6,6 +6,8 @@ function oddOrEven(number) {
     } else {
         return "odd";
     }
+
+    
 }
 
 module.exports.oddOrEven = oddOrEven;

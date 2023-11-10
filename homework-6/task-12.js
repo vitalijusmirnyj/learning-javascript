@@ -50,7 +50,7 @@ function allEvenNumbersFromZeroToNumber(number) {
     }
 }
 
-module.exports.allNumbersFromNumberToZero = allEvenNumbersFromZeroToNumber;
+module.exports.allEvenNumbersFromZeroToNumber = allEvenNumbersFromZeroToNumber;
 
 //Task 05. Write a function that will accept a single number and will output (using console.log) all odd numbers from 0 up to that number (including it).
 
@@ -125,7 +125,7 @@ module.exports.allNumbersFromLastToFirst = allNumbersFromLastToFirst;
  first one to the last one.
  */
 
- function eachEvenNumberFromArray(array) {
+function eachEvenNumberFromArray(array) {
     let i = 0;
     while (i < array.length) {
         if (array[i] % 2 === 0) {
@@ -144,12 +144,12 @@ module.exports.eachEvenNumberFromArray = eachEvenNumberFromArray;
 */
 
 function eachOddNumber(array) {
-    while (i < array.lenght) {
-        i = 0;
+    let i = 0;
+    while (i < array.length) {
+        if (array[i] % 2 !== 0) {
+            console.log(array[i]);
+        }
         i++;
-    }
-    if (array[i] % 2 !== 0) {
-        console.log(array[i]);
     }
 }
 

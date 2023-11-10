@@ -7,3 +7,4 @@ test('return a string “odd” if that number is odd, otherwise will return str
 test('return a string “odd” if that number is odd, otherwise will return string “even”', () => {
     expect(task.oddOrEven(4)).toBe("even");
   });
+  

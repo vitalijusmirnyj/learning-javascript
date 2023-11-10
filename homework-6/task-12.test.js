@@ -2,12 +2,16 @@
 
 const myImportedModule = require('./task-12');
 
+
+beforeEach(() => {
+    jest.clearAllMocks();
+});
+
 test('return all numbers from 0 up to that number (including it)', () => {
 
     const logSpy = jest.spyOn(global.console, 'log');
 
     myImportedModule.fromZeroToNumber(10);
-
 
     for (let i = 0; i <= 10; i++) {
         expect(logSpy).toHaveBeenNthCalledWith(i + 1, i);
@@ -16,8 +20,6 @@ test('return all numbers from 0 up to that number (including it)', () => {
 });
 
 //Task 02 test.
-
-myImportedModule = require('./task-12');
 
 test('return all numbers from 0 up to that number (not including it)', () => {
 
@@ -34,8 +36,6 @@ test('return all numbers from 0 up to that number (not including it)', () => {
 
 //Task 03 test.
 
- myImportedModule = require('./task-12');
-
 test('output (using console.log) all numbers from that number down to 0', () => {
 
     const logSpy = jest.spyOn(global.console, 'log');
@@ -51,28 +51,22 @@ test('output (using console.log) all numbers from that number down to 0', () => 
 
 //Task 04 test.
 
- myImportedModule = require('./task-12');
-
-test('output (using console.log) all even numbers from 0 up to that number (including it).', () => {
+test('output (using console.log) all numbers from that number down to 0.', () => {
 
     const logSpy = jest.spyOn(global.console, 'log');
-
-    myImportedModule.allNumbersFromNumberToZero(10);
+    const myNumber = 10;
+    myImportedModule.allNumbersFromNumberToZero(myNumber);
 
     let count = 0;
-    for (let i = 0, j = 1; i <= 10; i++) {
-        if (i % 2 === 0) {
+    for (let i = myNumber, j = 1; i >= 0; i--) {
         expect(logSpy).toHaveBeenNthCalledWith(j, i);
-        j++
+        j++;
         count++;
-        }
     }
     expect(logSpy).toHaveBeenCalledTimes(count);
 });
 
 //Task 05 test.
-
- myImportedModule = require('./task-12');
 
 test('output (using console.log) all odd numbers from 0 up to that number (including it)', () => {
 
@@ -83,17 +77,15 @@ test('output (using console.log) all odd numbers from 0 up to that number (inclu
     let count = 0;
     for (let i = 0, j = 1; i <= 10; i++) {
         if (i % 2 !== 0) {
-        expect(logSpy).toHaveBeenNthCalledWith(j, i);
-        j++
-        count++;
+            expect(logSpy).toHaveBeenNthCalledWith(j, i);
+            j++
+            count++;
         }
     }
     expect(logSpy).toHaveBeenCalledTimes(count);
 });
 
 //Task 06 test.
-
- myImportedModule = require('./task-12');
 
 test('output (using console.log) the sum of all numbers from zero to that number (including that number)', () => {
 
@@ -108,8 +100,6 @@ test('output (using console.log) the sum of all numbers from zero to that number
 
 //Task 07 test.
 
- myImportedModule = require('./task-12');
-
 test('output the sum of all numbers from 0 up to that number (not including it).', () => {
 
     const logSpy = jest.spyOn(global.console, 'log');
@@ -123,8 +113,6 @@ test('output the sum of all numbers from 0 up to that number (not including it).
 
 //Task 08 test.
 
- myImportedModule = require('./task-12');
-
 test('output (using console.log) each number from the first one to the last one', () => {
 
     const logSpy = jest.spyOn(global.console, 'log');
@@ -134,17 +122,15 @@ test('output (using console.log) each number from the first one to the last one'
 
     let count = 0;
     for (let i = 0; i < array.length; i++) {
-       
-    expect(logSpy).toHaveBeenNthCalledWith(i + 1, array[i]);
-    count++;
+
+        expect(logSpy).toHaveBeenNthCalledWith(i + 1, array[i]);
+        count++;
     }
 
     expect(logSpy).toHaveBeenCalledTimes(count);
 });
 
 //Task 09 test.
-
- myImportedModule = require('./tasks');
 
 test('output (using console.log) each number from the last one to the first one', () => {
 
@@ -155,17 +141,15 @@ test('output (using console.log) each number from the last one to the first one'
 
     let count = 0;
     for (let i = 0, j = array.length - 1; i < array.length; i++, j--) {
-       
-    expect(logSpy).toHaveBeenNthCalledWith(i + 1, array[j]);
-    count++;
+
+        expect(logSpy).toHaveBeenNthCalledWith(i + 1, array[j]);
+        count++;
     }
 
     expect(logSpy).toHaveBeenCalledTimes(count);
 });
 
 //Task 10 test.
-
- myImportedModule = require('./task-12');
 
 test('(using console.log) each even number starting from the first one to the last one.', () => {
 
@@ -186,9 +170,8 @@ test('(using console.log) each even number starting from the first one to the la
     expect(logSpy).toHaveBeenCalledTimes(count);
 });
 
-//Task 11 test.
 
- myImportedModule = require('./task-12');
+//Task 11 test.
 
 test('Will output (using console.log) each odd number starting from the first one to the last one.', () => {
 
@@ -208,6 +191,7 @@ test('Will output (using console.log) each odd number starting from the first on
     }
     expect(logSpy).toHaveBeenCalledTimes(count);
 });
+
 
 
 
